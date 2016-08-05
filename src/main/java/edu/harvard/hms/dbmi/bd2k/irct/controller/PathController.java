@@ -90,7 +90,6 @@ public class PathController {
 		irctEventListener.beforeFind(resource, resourcePath, findInformationList, session);
 		
 		for (FindInformationInterface findInformationEntry : findInformationList) {
-			
 			if (resource == null) {
 				for (Resource searchResource : rc.getPathResources()) {
 					matches.addAll(find(

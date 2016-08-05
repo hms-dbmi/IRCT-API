@@ -33,5 +33,15 @@ public class FindByOntology implements FindInformationInterface {
 	public Map<String, String> getValues() {
 		return values;
 	}
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public FindByOntology copy() {
+		FindByOntology copyFind = new FindByOntology();
+		for (String key : values.keySet()) {
+			copyFind.setValue(key, values.get(key));
+		}
+		return copyFind;
+	}
 
 }

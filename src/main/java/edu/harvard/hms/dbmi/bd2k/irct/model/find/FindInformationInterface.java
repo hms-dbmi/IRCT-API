@@ -10,4 +10,5 @@ public interface FindInformationInterface {
 	public String[] getRequiredParameters();
 	public void setValue(String parameter, String value);
 	public Map<String, String> getValues();
+	public <T extends FindInformationInterface> T copy();
 }

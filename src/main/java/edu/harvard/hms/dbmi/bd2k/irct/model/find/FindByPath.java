@@ -8,11 +8,11 @@ import java.util.Map;
 
 public class FindByPath implements FindInformationInterface {
 	Map<String, String> values;
-	
+
 	public FindByPath() {
 		values = new HashMap<String, String>();
 	}
-	
+
 	@Override
 	public void setValue(String parameter, String value) {
 		values.put(parameter, value);
@@ -31,6 +31,16 @@ public class FindByPath implements FindInformationInterface {
 	@Override
 	public Map<String, String> getValues() {
 		return values;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public FindByPath copy() {
+		FindByPath copyFind = new FindByPath();
+		for (String key : values.keySet()) {
+			copyFind.setValue(key, values.get(key));
+		}
+		return copyFind;
 	}
 
 }
