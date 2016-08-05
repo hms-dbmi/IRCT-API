@@ -35,6 +35,7 @@ public class PathController {
 	@Inject
 	Logger log;
 	
+	@Inject
 	private IRCTEventListener irctEventListener;
 
 	/**

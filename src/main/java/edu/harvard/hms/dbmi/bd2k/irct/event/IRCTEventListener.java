@@ -340,7 +340,7 @@ public class IRCTEventListener {
 	public void beforeFind(Resource resource, Entity resourcePath,
 			List<FindInformationInterface> findInformation,
 			SecureSession session) {
-		List<IRCTEvent> irctEvents = events.get("BeforFind");
+		List<IRCTEvent> irctEvents = events.get("BeforeFind");
 		if (irctEvents == null)
 			return;
 		for (IRCTEvent irctEvent : irctEvents) {
